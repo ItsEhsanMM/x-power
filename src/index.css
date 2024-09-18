@@ -1,0 +1,26 @@
+@import url(./assets/fonts/variable.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  font-family: "Yekan Bakh", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply text-white text-[20px] font-normal
+  }
+  :root {
+    --radius: 0.5rem;
+  }
+}
