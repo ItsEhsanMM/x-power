@@ -1,4 +1,4 @@
-@import url(./assets/fonts/variable.css);
+@import url(./fonts/variable.css);
 
 @tailwind base;
 @tailwind components;
@@ -15,6 +15,13 @@
 body {
   font-family: "Yekan Bakh", sans-serif;
 }
+
+.bg-pattern {
+  background-image: url("./assets/images/pattern.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 @layer base {
   body {
