@@ -14,6 +14,7 @@
 
 body {
   font-family: "Yekan Bakh", sans-serif;
+  max-width: 100%;
 }
 
 .bg-pattern {

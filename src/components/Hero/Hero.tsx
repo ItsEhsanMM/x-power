@@ -1,9 +1,9 @@
-import { Badge } from './ui/badge'
-import { Separator } from './ui/separator'
+import { Badge } from '../ui/badge'
+import { Separator } from '../ui/separator'
 
 const Hero = () => {
   return (
-    <section id='main' className='mt-36 flex'>
+    <section id='main' className='mt-36 flex px-10 lg:px-24'>
       <div className='absolute size-full bg-white/5 blur-3xl' />
       <article className='flex flex-col justify-evenly lg:max-w-[50%]'>
         <div className='w-full'>
