@@ -4,12 +4,12 @@ export const NAVIGATION_BAR_LINKS = [
     name: 'صفحه اصلی'
   },
   {
-    id: 'shop',
-    name: 'فروشگاه'
-  },
-  {
     id: 'services',
     name: 'خدمات'
+  },
+  {
+    id: 'shop',
+    name: 'فروشگاه'
   },
   {
     id: 'blog',

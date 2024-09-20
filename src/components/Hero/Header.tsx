@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 
 const Header = () => {
   const [slug, setSlug] = useState('')
-  console.log(slug)
 
   const getSlugFromHash = () => {
     const hash = window.location.hash
@@ -23,8 +22,33 @@ const Header = () => {
 
     window.addEventListener('hashchange', handleHashChange)
 
+    const observerOptions: IntersectionObserverInit = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.6
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id')
+          if (id) {
+            setSlug(id)
+          }
+        }
+      })
+    }, observerOptions)
+
+    NAVIGATION_BAR_LINKS.forEach(item => {
+      const section = document.getElementById(item.id)
+      if (section) {
+        observer.observe(section)
+      }
+    })
+
     return () => {
       window.removeEventListener('hashchange', handleHashChange)
+      observer.disconnect()
     }
   }, [])
 
