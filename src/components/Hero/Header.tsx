@@ -1,9 +1,12 @@
 import { NAVIGATION_BAR_LINKS } from '@/constants'
 import { Button } from '../ui/button'
 import { useEffect, useState } from 'react'
+import { useKindeAuth } from '@kinde-oss/kinde-auth-react'
+import { Avatar, AvatarImage } from '../ui/avatar'
 
 const Header = () => {
   const [slug, setSlug] = useState('')
+  const { login, isAuthenticated, logout, user } = useKindeAuth()
 
   const getSlugFromHash = () => {
     const hash = window.location.hash
@@ -71,7 +74,20 @@ const Header = () => {
         </article>
       </section>
       <section className='flex size-full items-center justify-end'>
-        <Button>ورود و ثبت نام</Button>
+        {isAuthenticated ? (
+          <div className='flex items-center gap-x-4'>
+            <Button variant='destructive' onClick={logout} className='h-10'>
+              خروج از حساب
+            </Button>
+            <Avatar>
+              <AvatarImage src={user!.picture!} />
+            </Avatar>
+          </div>
+        ) : (
+          <Button onClick={() => login()} type='button'>
+            ورود و ثبت نام
+          </Button>
+        )}
       </section>
     </header>
   )
