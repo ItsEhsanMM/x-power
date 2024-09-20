@@ -12,9 +12,30 @@
   /* outline: 1px solid red; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Yekan Bakh", sans-serif;
   max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff; /* Color of the scrollbar thumb */
+  border-radius: 2px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6F4EFD; /* Color when hovering */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #060B25; /* Background color of the track */
 }
 
 .bg-pattern {

@@ -1,13 +1,16 @@
-import Header from './components/Header'
-import Hero from './components/Hero/Hero'
-import MiddleText from './components/Hero/MiddleText'
+import HeroSection from './components/Hero'
+import MiddleText from './components/MiddleText'
+import ServicesSection from './components/services'
 
 function App() {
   return (
-    <section dir='rtl' className='bg-pattern overflow-hidden bg-dark-blue'>
-      <Header />
-      <Hero />
+    <section
+      dir='rtl'
+      className='flex min-h-dvh flex-col gap-y-24 overflow-hidden bg-dark-blue'
+    >
+      <HeroSection />
       <MiddleText />
+      <ServicesSection />
     </section>
   )
 }
