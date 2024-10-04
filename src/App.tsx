@@ -4,6 +4,7 @@ import ServicesSection from './components/services'
 import { KindeProvider } from '@kinde-oss/kinde-auth-react'
 import Shop from './components/shop'
 import Contacts from './components/contacts'
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -21,7 +22,10 @@ function App() {
         <MiddleText />
         <ServicesSection />
         <Shop />
-        <Contacts />
+        <div>
+          <Contacts />
+          <Footer />
+        </div>
       </section>
     </KindeProvider>
   )
