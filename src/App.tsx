@@ -2,6 +2,7 @@ import HeroSection from './components/Hero'
 import MiddleText from './components/MiddleText'
 import ServicesSection from './components/services'
 import { KindeProvider } from '@kinde-oss/kinde-auth-react'
+import Shop from './components/shop'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <HeroSection />
         <MiddleText />
         <ServicesSection />
+        <Shop />
       </section>
     </KindeProvider>
   )

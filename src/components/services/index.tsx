@@ -1,5 +1,5 @@
 import { SERVICES } from '@/constants'
-import { Card } from '../shared/Card'
+import { Card } from './Card'
 import Title from '../shared/Title'
 
 const ServicesSection = () => {
